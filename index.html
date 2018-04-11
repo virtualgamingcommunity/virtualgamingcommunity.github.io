@@ -31,9 +31,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
       Vue.prototype.$appName = 'Virtual Gaming Community'
-      
+      Vue.prototype.$http = axios
+      const instance = axios.create({
+        baseURL: 'https://virtualgamingcommunity.com/api/',
+        timeout: 1000
+      });
       var app = new Vue({
         el: '#app',
         data: {
