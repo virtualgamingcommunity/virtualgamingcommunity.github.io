@@ -15,7 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h1 :title="title" v-text="title"></h1>
+            <h1 :title="$appName" v-text="$appName"></h1>
           </div>
         </div>
       </div>
@@ -32,10 +32,11 @@
     <script src="https://unpkg.com/vuex"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script type="text/javascript">
+      Vue.prototype.$appName = 'Virtual Gaming Community'
+      
       var app = new Vue({
         el: '#app',
         data: {
-          title: 'Virtual Gaming Community',
           message: 'Hello Vue!'
         }
       })
