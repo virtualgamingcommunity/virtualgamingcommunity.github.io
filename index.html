@@ -32,6 +32,29 @@
     <script src="https://unpkg.com/vuex"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-functions.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD5cg_zZgr_l3aXqdI9G-YvvMsGKIc73dw",
+        authDomain: "virtual-gaming-community.firebaseapp.com",
+        databaseURL: "https://virtual-gaming-community.firebaseio.com",
+        projectId: "virtual-gaming-community",
+        storageBucket: "virtual-gaming-community.appspot.com",
+        messagingSenderId: "146168459776"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+      
+    </script>
     <script type="text/javascript">
       Vue.prototype.$appName = 'Virtual Gaming Community'
       Vue.prototype.$http = axios
